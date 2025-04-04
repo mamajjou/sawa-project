@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply text-gray-900 bg-white;
+}
+
+.prose a {
+  @apply text-purple-600 hover:text-purple-700 transition-colors;
+}
+
+.prose strong {
+  @apply text-gray-900;
+}
+
+.prose h3 {
+  @apply text-2xl font-semibold text-gray-900 mt-8 mb-4;
+}
+
+.prose ul {
+  @apply list-disc pl-6 mb-6;
+}
+
+.prose ol {
+  @apply list-decimal pl-6 mb-6;
+}
+
+/* Gradient animations */
+.bg-gradient-animate {
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Ensure smooth transitions between sections */
+section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Enhance backdrop blur effect - reduced from xl to sm */
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Smooth color transitions */
+.bg-gradient-to-b,
+.bg-gradient-to-t {
+  transition: background-color 0.5s ease;
+}
+
